@@ -4,26 +4,24 @@ The game will be programmed for, and played using window.prompt to get input fro
 SKETCH from hints
 1 STEP
 
-✅ Make A Ship Class: a class called Spaceship with properties hull, firepower, and accuracy.
+✅ 1.1 Make A Ship Class: a class called Spaceship with properties hull, firepower, and accuracy.
 
-✅  Make the USS_Assembly object. It will be Human Ship sub-class and an instance of the USS Assembly spaceship with hull 20, firepower 5, and accuracy .7.
+✅ 1.2 Make the USS_Assembly object. It will be Human Ship sub-class and an instance of the USS Assembly spaceship with hull 20, firepower 5, and accuracy .7.
 
-✅  Make a single alien ship object. Make an Alien Ship sub-class: a subclass called AlienSpaceship that inherits from Spaceship and randomizes its properties using Math.random() method.
+✅ 1.3 Make a single alien ship object. Make an Alien Ship sub-class: a subclass called AlienSpaceship that inherits from Spaceship and randomizes its properties using Math.random() method.
 
+    this.hull = Math.floor(Math.random() * 4) + 3;
+    this.firepower = Math.floor(Math.random() * 3) + 2;
+    this.accuracy = (Math.floor(Math.random() * 3) + 6) / 10;
 
-✅  Simulate a battle between your ship and a single alien ship first: Make a method for the USS Assembly that will attack a given target. The target can be an input to the method. Run the method and pass it the alien ship. 
+✅ 1.4 Simulate a battle between your ship and a single alien ship first: Make a method for the USS Assembly that will attack a given target. The target can be an input to the method. Run the method and pass it the alien ship. 
 
 ✅  Make it so the method reduces the target's hull by the firepower of the USS Assembly.
-
-
 
     Example use of accuracy to determine a hit:
       if (Math.random() < alien[0].accuracy) {
 	      console.log('You have been hit!');
       }
-    this.hull = Math.floor(Math.random() * 4) + 3;
-    this.firepower = Math.floor(Math.random() * 3) + 2;
-    this.accuracy = (Math.floor(Math.random() * 3) + 6) / 10;
     
 2 STEP
 

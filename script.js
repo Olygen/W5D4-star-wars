@@ -6,11 +6,19 @@ class Spaceship {
     this.accuracy = accuracy;
     }
 } 
-//1.2
+//1.2 (and method to attack)
     class HumanShip extends Spaceship {
         constructor() {
           super(20, 5, 0.7);
         }
+        attack(target) {
+            if (Math.random() < this.accuracy) {
+              target.hull -= this.firepower;
+              console.log(`You hit the alien ship! Its hull is now ${target.hull}.`);
+            } else {
+              console.log(`Your attack missed!`);
+            }
+          }
       }
       
       const USS_Assembly = new HumanShip();
@@ -26,4 +34,40 @@ class Spaceship {
 
       const alienShip = new AlienSpaceship();
 
-    
+ //1.4
+ USS_Assembly.attack(alienShip);
+ 
+ const startAttack = window.prompt("Do you want to start the attack? (yes or no)");
+ if (startAttack === "yes") {
+    // Attack the alien ship with the USS Assembly
+    // const alienShip = new AlienSpaceship();
+    while (alienShip.hull > 0 && USS_Assembly.hull > 0) {
+      // USS Assembly attacks the alien ship
+      console.log("USS Assembly attacks the alien ship");
+      if (USS_Assembly.attack(alienShip)) {
+        console.log(`The alien ship's hull is ${alienShip.hull}`);
+      } else {
+        console.log("The attack missed");
+      }
+  
+      // Alien ship attacks the USS Assembly
+      if (alienShip.hull > 0 && USS_Assembly.hull > 0) {
+        console.log("Alien ship attacks the USS Assembly");
+        if (alienShip.attack(USS_Assembly)) {
+          console.log(`The USS Assembly's hull is ${USS_Assembly.hull}`);
+        } else {
+          console.log("The attack missed");
+        }
+      }
+    }
+  
+    // Output the result of the battle
+    if (USS_Assembly.hull <= 0) {
+      console.log("Game over. The USS Assembly was destroyed.");
+    } else {
+      console.log("Congratulations! You have destroyed the alien ship.");
+    }
+  } else {
+    // If the user does not confirm, end the attack
+    console.log("Attack aborted.");
+  }
