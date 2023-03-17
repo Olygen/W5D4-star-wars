@@ -23,17 +23,17 @@ SKETCH from hints
 	      console.log('You have been hit!');
       }
     
-2 STEP
+2 STEP - there is no need in this step as health if are checked in attack method
 
-✅  Make a game object
+✅  2.1 Make a game object
 
-✅  Make a method in the game object that will run a 'check win' for the health of the alien(s) and/or the USS Assembly. If the hull is 0 or less, display a message that the ship went kabloo-ey.
+✅  2.2 Make a method in the game object that will run a 'check win' for the health of the alien(s) and/or the USS Assembly. If the hull is 0 or less, display a message that the ship went kabloo-ey.
 
-✅  Make it so the alien will only be hit if a Math.random call is below the accuracy threshold.
+✅  2.3 Make it so the alien will only be hit if a Math.random call is below the accuracy threshold.
 
-✅  Make a method for the alien ship to attack a target.
+✅  2.4 Make a method for the alien ship to attack a target.
 
-✅  At a status console log for the end of the round.
+✅  2.5 At a status console log for the end of the round.
 
 🔴  PROBLEM: If you make the alien ship go kabloo-ey, then the alien should not then be able to attack you. Fix this.
 
