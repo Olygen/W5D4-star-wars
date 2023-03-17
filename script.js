@@ -47,7 +47,7 @@ class Spaceship {
     }
 
       const alienShip = new AlienSpaceship();
-
+      
  //1.4
 
  
@@ -64,19 +64,16 @@ class Spaceship {
         alienShip.alienAttack(USS_Assembly);
     }
     }
-
     if (USS_Assembly.hull <= 0) {
-      console.log("Game over. The USS Assembly was destroyed.");
-      window.alert("Game over. The USS Assembly was destroyed.");
+        console.log("Game over. The USS Assembly was destroyed.");
+        window.alert("Game over. The USS Assembly was destroyed.");
     } else {
-      console.log("Congratulations! You have destroyed the alien ship.");
-      window.alert("Congratulations! You have destroyed the alien ship.");
+        console.log("Congratulations! You have destroyed the alien ship.");
+        window.alert("Congratulations! You have destroyed the alien ship.");
     }
-  } else {
-    // If the user does not confirm, end the attack
-    console.log("Attack aborted.");
-    window.alert("Attack aborted.");
-    
-  }
+    } else {
+        console.log("Attack aborted.");
+        window.alert("Attack aborted.");
+    }
  
 });
