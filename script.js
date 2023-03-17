@@ -47,16 +47,21 @@ class Spaceship {
       window.alert("USS Assembly attacks the alien ship");
       if (USS_Assembly.attack(alienShip)) {
         console.log(`The alien ship's hull is ${alienShip.hull}`);
+        window.alert(`The alien ship's hull is ${alienShip.hull}`);
       } else {
         console.log("The attack missed");
+        this.window.alert("The attack missed");
       }
   
       if (alienShip.hull > 0 && USS_Assembly.hull > 0) {
         console.log("Alien ship attacks the USS Assembly");
+        this.window.alert("Alien ship attacks the USS Assembly");
         if (alienShip.attack(USS_Assembly)) {
           console.log(`The USS Assembly's hull is ${USS_Assembly.hull}`);
+          this.window.alert(`The USS Assembly's hull is ${USS_Assembly.hull}`);
         } else {
           console.log("The attack missed");
+          this.window.alert("The attack missed");
         }
       }
     }
@@ -64,11 +69,14 @@ class Spaceship {
     // Output the result of the battle
     if (USS_Assembly.hull <= 0) {
       console.log("Game over. The USS Assembly was destroyed.");
+      this.window.alert("Game over. The USS Assembly was destroyed.");
     } else {
       console.log("Congratulations! You have destroyed the alien ship.");
+      this.window.alert("Congratulations! You have destroyed the alien ship.");
     }
   } else {
     // If the user does not confirm, end the attack
     console.log("Attack aborted.");
+    this.window.alert("Attack aborted.");
   }
 });
