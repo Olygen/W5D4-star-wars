@@ -41,17 +41,17 @@ SKETCH from hints
 
 3 STEP
 
-✅  Make many alien ships with a Class. Make each object slightly different . . .
+✅  3.1 Make many alien ships with a Class. Make each object slightly different . . .
 
-✅  Hull can be a random number between 3 and 6, firepower between 2 and 4, accuracy between 0.6 and 0.8.
+✅  3.2 Hull can be a random number between 3 and 6, firepower between 2 and 4, accuracy between 0.6 and 0.8.
 
-✅  Make a loop that calls the Class and generates alien ships. Push those constructed objects into a predefined array. Start with 6 ships (the loop should run 6 times).
+✅  3.3 Make a loop that calls the Class and generates alien ships. Push those constructed objects into a predefined array. Start with 6 ships (the loop should run 6 times).
 
-✅  Try out the game with the first alien ship in the array.
+✅  3.4 Try out the game with the first alien ship in the array.
 
-✅  Run the battle with all ships in turn.
+✅  3.5 Run the battle with all ships in turn.
 
-✅  Move functions into the game object.
+✅  3.6 Move functions into the game object.
 
 🎉  Move on to the bonuses  🎉.
 
