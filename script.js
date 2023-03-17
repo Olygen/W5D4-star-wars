@@ -39,10 +39,7 @@ class Spaceship {
  
  const startAttack = window.prompt("Do you want to start the attack? (yes or no)");
  if (startAttack === "yes") {
-    // Attack the alien ship with the USS Assembly
-    // const alienShip = new AlienSpaceship();
     while (alienShip.hull > 0 && USS_Assembly.hull > 0) {
-      // USS Assembly attacks the alien ship
       console.log("USS Assembly attacks the alien ship");
       if (USS_Assembly.attack(alienShip)) {
         console.log(`The alien ship's hull is ${alienShip.hull}`);
@@ -50,7 +47,6 @@ class Spaceship {
         console.log("The attack missed");
       }
   
-      // Alien ship attacks the USS Assembly
       if (alienShip.hull > 0 && USS_Assembly.hull > 0) {
         console.log("Alien ship attacks the USS Assembly");
         if (alienShip.attack(USS_Assembly)) {
