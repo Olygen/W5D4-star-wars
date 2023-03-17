@@ -1,4 +1,5 @@
-//1.1
+window.addEventListener('load', function() {
+    //1.1
 class Spaceship {
     constructor(hull, firepower, accuracy) {
     this.hull = hull;
@@ -35,12 +36,15 @@ class Spaceship {
       const alienShip = new AlienSpaceship();
 
  //1.4
- USS_Assembly.attack(alienShip);
+
  
+ USS_Assembly.attack(alienShip);
+
  const startAttack = window.prompt("Do you want to start the attack? (yes or no)");
  if (startAttack === "yes") {
     while (alienShip.hull > 0 && USS_Assembly.hull > 0) {
       console.log("USS Assembly attacks the alien ship");
+      window.alert("USS Assembly attacks the alien ship");
       if (USS_Assembly.attack(alienShip)) {
         console.log(`The alien ship's hull is ${alienShip.hull}`);
       } else {
@@ -56,7 +60,7 @@ class Spaceship {
         }
       }
     }
-  
+
     // Output the result of the battle
     if (USS_Assembly.hull <= 0) {
       console.log("Game over. The USS Assembly was destroyed.");
@@ -67,3 +71,4 @@ class Spaceship {
     // If the user does not confirm, end the attack
     console.log("Attack aborted.");
   }
+});
